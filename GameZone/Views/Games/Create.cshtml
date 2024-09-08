@@ -1,0 +1,56 @@
+﻿ @model CreateGameVM
+ @{ ViewData["Title"] = "Add New Game"; }
+
+<h2 class="text-center my-5">Add New Game To Your Store</h2>
+<hr />
+
+<section>
+	<form asp-controller="Games" asp-action="Create" method="post" enctype="multipart/form-data">
+		<div class="row">
+			<div class="col-12 col-md-6">
+				<label asp-for="Name" class="form-label mt-4">Game Title</label>
+				<input asp-for="Name" type="text" class="form-control" placeholder="Enter Game Name">
+				<small class="form-text text-muted"><span asp-validation-for="Name" class="text-danger"></span></small>
+			</div>	
+			
+			<div class="col-12 col-md-6">
+				<label asp-for="CategoryId" class="form-label mt-4">Category</label>
+				<select class="form-select" asp-for="CategoryId" asp-items="Model.Categories">
+					<option>Select Category</option>
+				</select>
+				<small class="form-text text-muted"><span asp-validation-for="CategoryId" class="text-danger"></span></small>
+			</div>		
+			
+			<div class="col-12 col-md-6">
+				<label asp-for="SelectedDevices" class="form-label mt-4">Devices</label>
+				<select class="form-select" asp-for="SelectedDevices" asp-items="Model.Devices">
+					<option>Select Devices</option>
+				</select>				
+				<small class="form-text text-muted"><span asp-validation-for="SelectedDevices" class="text-danger"></span></small>
+			</div>			
+
+			<div class="col-12 col-md-6">
+				<label asp-for="Description" class="form-label mt-4">Description</label>
+				<textarea asp-for="Description" class="form-control"  rows="3"></textarea>
+				<small class="form-text text-muted"><span asp-validation-for="Description" class="text-danger"></span></small>
+			</div>
+
+		</div>
+		<div class="row">
+			<div class="col-12 col-md-6">
+				<label asp-for="Cover" class="form-label mt-4">Choose Cover</label>
+				<input asp-for="Cover" type="file" class="form-control" placeholder="Enter Game Name">
+				<small class="form-text text-muted">only .jpg, .jeg, .png are allowed</small>
+				<small class="form-text text-muted d-block"><span asp-validation-for="Description" class="text-danger"></span></small>
+			</div>
+			<div class="col-12 col-md-6">
+				<p>lorem</p>
+			</div>
+		</div>
+
+		<div class="mt-5">
+			<button class="btn btn-primary" type="submit">Add</button>
+		</div>
+
+	</form>
+</section>
