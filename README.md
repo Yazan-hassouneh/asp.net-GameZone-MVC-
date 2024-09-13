@@ -19,4 +19,4 @@ Game Zone, asp.net project, using MVC pattern.
 
 ### - Addition :  
 
-**Create Custome Attributes**
+**Create Custome Validation Attributes**
