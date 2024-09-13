@@ -22,6 +22,7 @@
 
   <ItemGroup>
     <Folder Include="Configuration\Mapper\" />
+    <Folder Include="wwwroot\Assets\Img\GamesCovers\" />
   </ItemGroup>
 
 </Project>

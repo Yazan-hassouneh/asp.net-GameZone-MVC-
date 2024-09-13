@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\GameZone.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\GF 63\\Documents\\C#\\Asp.Net-WebApp\\MVC\\GameZone\\GameZone\\wwwroot\\Assets\\Img\\GamesCovers\\e2313c69-0759-4b4c-8253-fb9007fb05ab.jpeg",
+      "PackagePath": "staticwebassets\\Assets\\Img\\GamesCovers\\e2313c69-0759-4b4c-8253-fb9007fb05ab.jpeg"
+    },
+    {
       "Id": "C:\\Users\\GF 63\\Documents\\C#\\Asp.Net-WebApp\\MVC\\GameZone\\GameZone\\wwwroot\\css\\LiteraBootswatchTheme.min.css",
       "PackagePath": "staticwebassets\\css\\LiteraBootswatchTheme.min.css"
     },

@@ -1,9 +1,12 @@
 using GameZone.Data;
+using GameZone.Services.Category;
+using GameZone.Services.Device;
+using GameZone.Services.GameServices;
 using Microsoft.EntityFrameworkCore;
 
 namespace GameZone
 {
-    public class Program
+	public class Program
     {
         public static void Main(string[] args)
         {
@@ -14,6 +17,10 @@ namespace GameZone
             builder.Services.AddDbContext<GameZoneDbContext>(options => options.UseSqlServer(
                     builder.Configuration.GetConnectionString("GameZoneConnectionString")
                 ));
+
+            builder.Services.AddScoped<ICategoriesServices, CategoriesServices>();
+            builder.Services.AddScoped<IDevicesServices, DevicesServices>();
+            builder.Services.AddScoped<IGameServices, GameServices>();
 
             var app = builder.Build();
 

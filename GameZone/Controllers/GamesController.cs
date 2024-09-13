@@ -1,18 +1,21 @@
-﻿using GameZone.Data;
-using GameZone.ViewModel;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
+﻿
+
+using GameZone.Services.GameServices;
 
 namespace GameZone.Controllers
 {
     public class GamesController : Controller
     {
-        private readonly GameZoneDbContext _db;
-        public GamesController(GameZoneDbContext db)
-        {
-            _db = db;
-        }
-        public IActionResult Index()
+        private readonly ICategoriesServices _categoriesServices;
+        private readonly IDevicesServices _devicesServices;
+        private readonly IGameServices _gameServices;
+		public GamesController(ICategoriesServices categoriesServices, IDevicesServices devicesServices, IGameServices gameServices)
+		{
+			_categoriesServices = categoriesServices;
+			_devicesServices = devicesServices;
+            _gameServices = gameServices;
+		}
+		public IActionResult Index()
         {
             return View();
         }
@@ -20,31 +23,23 @@ namespace GameZone.Controllers
         {
             CreateGameVM vm = new()
             {
-                Categories = _db.Categories.Select(c => new SelectListItem { 
-                    Value = c.Id.ToString(),
-                    Text = c.Name,
-                })
-                .OrderBy(c => c.Text)
-                .ToList(),
-
-                Devices = _db.Devices.Select(d => new SelectListItem
-                {
-                    Value = d.Id.ToString(),
-                    Text = d.Name,
-                })
-                .OrderBy(d => d.Text)
-                .ToList(),
+                Categories = _categoriesServices.GetSelectListItems(),
+                Devices =  _devicesServices.GetSelectListItems()
             };
             return View(vm);
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-		public IActionResult Create(CreateGameVM model)
+		public async Task<IActionResult> Create(CreateGameVM model)
         {
             if (!ModelState.IsValid)
             {
+                model.Categories = _categoriesServices.GetSelectListItems();
+                model.Devices = _devicesServices.GetSelectListItems();
                 return View(model);
             }
+
+            await _gameServices.Create(model);
 
             return RedirectToAction(nameof(Index));
         }

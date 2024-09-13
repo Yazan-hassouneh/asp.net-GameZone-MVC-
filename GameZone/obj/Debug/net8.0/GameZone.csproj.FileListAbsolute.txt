@@ -136,3 +136,4 @@ C:\Users\GF 63\Documents\C#\Asp.Net-WebApp\MVC\GameZone\GameZone\obj\Debug\net8.
 C:\Users\GF 63\Documents\C#\Asp.Net-WebApp\MVC\GameZone\GameZone\obj\Debug\net8.0\GameZone.genruntimeconfig.cache
 C:\Users\GF 63\Documents\C#\Asp.Net-WebApp\MVC\GameZone\GameZone\obj\Debug\net8.0\ref\GameZone.dll
 C:\Users\GF 63\Documents\C#\Asp.Net-WebApp\MVC\GameZone\GameZone\bin\Debug\net8.0\libman.json
+C:\Users\GF 63\Documents\C#\Asp.Net-WebApp\MVC\GameZone\GameZone\obj\Debug\net8.0\GameZone.sourcelink.json

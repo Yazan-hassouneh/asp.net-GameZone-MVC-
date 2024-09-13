@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{B0956D98-8B2D-43E2-97C9-344B7004915A}|GameZone\\GameZone.csproj|solutionrelative:gamezone\\views\\games\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B0956D98-8B2D-43E2-97C9-344B7004915A}|GameZone\\GameZone.csproj|c:\\users\\gf 63\\documents\\c#\\asp.net-webapp\\mvc\\gamezone\\gamezone\\controllers\\gamescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B0956D98-8B2D-43E2-97C9-344B7004915A}|GameZone\\GameZone.csproj|solutionrelative:gamezone\\controllers\\gamescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B0956D98-8B2D-43E2-97C9-344B7004915A}|GameZone\\GameZone.csproj|c:\\users\\gf 63\\documents\\c#\\asp.net-webapp\\mvc\\gamezone\\gamezone\\attributes\\allowedextentionsattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0956D98-8B2D-43E2-97C9-344B7004915A}|GameZone\\GameZone.csproj|solutionrelative:gamezone\\attributes\\allowedextentionsattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B0956D98-8B2D-43E2-97C9-344B7004915A}|GameZone\\GameZone.csproj|c:\\users\\gf 63\\documents\\c#\\asp.net-webapp\\mvc\\gamezone\\gamezone\\vm\\creategamevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B0956D98-8B2D-43E2-97C9-344B7004915A}|GameZone\\GameZone.csproj|solutionrelative:gamezone\\vm\\creategamevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B0956D98-8B2D-43E2-97C9-344B7004915A}|GameZone\\GameZone.csproj|c:\\users\\gf 63\\documents\\c#\\asp.net-webapp\\mvc\\gamezone\\gamezone\\configuration\\modelconfig\\gameconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B0956D98-8B2D-43E2-97C9-344B7004915A}|GameZone\\GameZone.csproj|solutionrelative:gamezone\\configuration\\modelconfig\\gameconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B0956D98-8B2D-43E2-97C9-344B7004915A}|GameZone\\GameZone.csproj|c:\\users\\gf 63\\documents\\c#\\asp.net-webapp\\mvc\\gamezone\\gamezone\\attributes\\filemaxsizeattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0956D98-8B2D-43E2-97C9-344B7004915A}|GameZone\\GameZone.csproj|solutionrelative:gamezone\\attributes\\filemaxsizeattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,50 +26,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "GameConfig.cs",
-              "DocumentMoniker": "C:\\Users\\GF 63\\Documents\\C#\\Asp.Net-WebApp\\MVC\\GameZone\\GameZone\\Configuration\\ModelConfig\\GameConfig.cs",
-              "RelativeDocumentMoniker": "GameZone\\Configuration\\ModelConfig\\GameConfig.cs",
-              "ToolTip": "C:\\Users\\GF 63\\Documents\\C#\\Asp.Net-WebApp\\MVC\\GameZone\\GameZone\\Configuration\\ModelConfig\\GameConfig.cs",
-              "RelativeToolTip": "GameZone\\Configuration\\ModelConfig\\GameConfig.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-08T02:54:38.45Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GamesController.cs",
-              "DocumentMoniker": "C:\\Users\\GF 63\\Documents\\C#\\Asp.Net-WebApp\\MVC\\GameZone\\GameZone\\Controllers\\GamesController.cs",
-              "RelativeDocumentMoniker": "GameZone\\Controllers\\GamesController.cs",
-              "ToolTip": "C:\\Users\\GF 63\\Documents\\C#\\Asp.Net-WebApp\\MVC\\GameZone\\GameZone\\Controllers\\GamesController.cs",
-              "RelativeToolTip": "GameZone\\Controllers\\GamesController.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAApwC0AAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-08T02:52:17.061Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CreateGameVM.cs",
-              "DocumentMoniker": "C:\\Users\\GF 63\\Documents\\C#\\Asp.Net-WebApp\\MVC\\GameZone\\GameZone\\VM\\CreateGameVM.cs",
-              "RelativeDocumentMoniker": "GameZone\\VM\\CreateGameVM.cs",
-              "ToolTip": "C:\\Users\\GF 63\\Documents\\C#\\Asp.Net-WebApp\\MVC\\GameZone\\GameZone\\VM\\CreateGameVM.cs",
-              "RelativeToolTip": "GameZone\\VM\\CreateGameVM.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-08T02:43:18.448Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -79,10 +40,46 @@
               "RelativeDocumentMoniker": "GameZone\\Views\\Games\\Create.cshtml",
               "ToolTip": "C:\\Users\\GF 63\\Documents\\C#\\Asp.Net-WebApp\\MVC\\GameZone\\GameZone\\Views\\Games\\Create.cshtml",
               "RelativeToolTip": "GameZone\\Views\\Games\\Create.cshtml",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAACsAAAAuAAAA",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAABoAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-07T03:26:44.723Z",
+              "WhenOpened": "2024-09-13T15:57:46.195Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FileMaxSizeAttribute.cs",
+              "DocumentMoniker": "C:\\Users\\GF 63\\Documents\\C#\\Asp.Net-WebApp\\MVC\\GameZone\\GameZone\\Attributes\\FileMaxSizeAttribute.cs",
+              "RelativeDocumentMoniker": "GameZone\\Attributes\\FileMaxSizeAttribute.cs",
+              "ToolTip": "C:\\Users\\GF 63\\Documents\\C#\\Asp.Net-WebApp\\MVC\\GameZone\\GameZone\\Attributes\\FileMaxSizeAttribute.cs",
+              "RelativeToolTip": "GameZone\\Attributes\\FileMaxSizeAttribute.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T15:27:22.836Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CreateGameVM.cs",
+              "DocumentMoniker": "C:\\Users\\GF 63\\Documents\\C#\\Asp.Net-WebApp\\MVC\\GameZone\\GameZone\\VM\\CreateGameVM.cs",
+              "RelativeDocumentMoniker": "GameZone\\VM\\CreateGameVM.cs",
+              "ToolTip": "C:\\Users\\GF 63\\Documents\\C#\\Asp.Net-WebApp\\MVC\\GameZone\\GameZone\\VM\\CreateGameVM.cs",
+              "RelativeToolTip": "GameZone\\VM\\CreateGameVM.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T15:19:29.374Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AllowedExtentionsAttribute.cs",
+              "DocumentMoniker": "C:\\Users\\GF 63\\Documents\\C#\\Asp.Net-WebApp\\MVC\\GameZone\\GameZone\\Attributes\\AllowedExtentionsAttribute.cs",
+              "RelativeDocumentMoniker": "GameZone\\Attributes\\AllowedExtentionsAttribute.cs",
+              "ToolTip": "C:\\Users\\GF 63\\Documents\\C#\\Asp.Net-WebApp\\MVC\\GameZone\\GameZone\\Attributes\\AllowedExtentionsAttribute.cs",
+              "RelativeToolTip": "GameZone\\Attributes\\AllowedExtentionsAttribute.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T15:07:26.526Z"
             }
           ]
         }

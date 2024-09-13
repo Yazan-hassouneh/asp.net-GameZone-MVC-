@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "5TKlw6NcR5kIpgfSifBvxgrsruigu5tOmXkwj0HdqJM=",
+  "Hash": "W7pt+eyhTaP57AuNniAlSNOCouhwB2MD+0PidbBKVKM=",
   "Source": "GameZone",
   "BasePath": "_content/GameZone",
   "Mode": "Default",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\GF 63\\Documents\\C#\\Asp.Net-WebApp\\MVC\\GameZone\\GameZone\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\GameZone.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\GF 63\\Documents\\C#\\Asp.Net-WebApp\\MVC\\GameZone\\GameZone\\wwwroot\\Assets\\Img\\GamesCovers\\e2313c69-0759-4b4c-8253-fb9007fb05ab.jpeg",
+      "SourceId": "GameZone",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\GF 63\\Documents\\C#\\Asp.Net-WebApp\\MVC\\GameZone\\GameZone\\wwwroot\\",
+      "BasePath": "_content/GameZone",
+      "RelativePath": "Assets/Img/GamesCovers/e2313c69-0759-4b4c-8253-fb9007fb05ab.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Assets\\Img\\GamesCovers\\e2313c69-0759-4b4c-8253-fb9007fb05ab.jpeg"
     },
     {
       "Identity": "C:\\Users\\GF 63\\Documents\\C#\\Asp.Net-WebApp\\MVC\\GameZone\\GameZone\\wwwroot\\css\\LiteraBootswatchTheme.min.css",
