@@ -17,7 +17,7 @@ namespace GameZone.Attributes
 			if (file is not null)
 			{
 				var extention = Path.GetExtension(file.FileName);
-				var isAllowed = _allowedExtentions.Split('/').Contains(extention, StringComparer.OrdinalIgnoreCase);
+				var isAllowed = _allowedExtentions.Split(',').Contains(extention, StringComparer.OrdinalIgnoreCase);
 
 				if (!isAllowed)
 				{

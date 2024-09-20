@@ -1,1 +1,48 @@
-﻿<h1>Home Controller</h1>
+﻿@using GameZone.Settings
+@model List<Game>
+@{
+	
+}
+
+
+<div class="my-5 text-center">
+	<h1 class="mb-4">Game Zone Store</h1>
+	<p class="text-muted small">Welcome To Our Store, Yoy Can Find All Games You Want, With Best Price And Best Quality</p>
+</div>
+
+
+<section>
+	<div class="row overflow-y-auto py-4 justify-content-center">
+		@{
+			@foreach(var game in Model)
+			{
+				<div class="cardContainer col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+					<div class="card">
+						<div class="imgContainer">
+							<img src="@($"{FileSettings.GamesCoversPath}{game.Cover}")" class="card-img-top h-100 object-fit-cover" alt="game Cover">
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">@game.Name</h5>
+							<div class="d-flex justify-content-between align-content-center">
+								<span class="badge bg-primary">@game.Category.Name</span>
+								<div class="d-inline-block">
+									@{
+										@foreach(var gameDevice in game.Devices)
+										{
+											<span class="badge bg-dark"><i class="@gameDevice.device.Icon"></i></span>
+										}
+									}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			}
+		}
+
+	</div>
+</section>
+
+@section Styles {
+	<link href="~/css/CoverStyle.css" rel="stylesheet" />
+}

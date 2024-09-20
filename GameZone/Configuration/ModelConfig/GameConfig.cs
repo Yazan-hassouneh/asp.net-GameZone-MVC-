@@ -9,7 +9,7 @@ namespace GameZone.Configuration.ModelConfig
         public override void Configure(EntityTypeBuilder<Game> builder)
         {
             base.Configure(builder);
-            builder.Property(model => model.Description).HasMaxLength(2500);
+            builder.Property(model => model.Description).HasMaxLength(1024);
             builder.Property(model => model.Cover).HasMaxLength(255);
         }
     }

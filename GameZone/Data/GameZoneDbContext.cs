@@ -1,5 +1,4 @@
 ﻿using GameZone.Configuration.ModelConfig;
-using GameZone.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace GameZone.Data

@@ -1,6 +1,6 @@
-using GameZone.Data;
-using GameZone.Services.Category;
-using GameZone.Services.Device;
+using FluentValidation;
+using FluentValidation.AspNetCore;
+using GameZone.Configuration.VMConfig;
 using GameZone.Services.GameServices;
 using Microsoft.EntityFrameworkCore;
 
@@ -21,6 +21,10 @@ namespace GameZone
             builder.Services.AddScoped<ICategoriesServices, CategoriesServices>();
             builder.Services.AddScoped<IDevicesServices, DevicesServices>();
             builder.Services.AddScoped<IGameServices, GameServices>();
+			builder.Services.AddFluentValidationAutoValidation();
+			builder.Services.AddFluentValidationClientsideAdapters();
+			builder.Services.AddScoped<IValidator<CreateGameVM>, CreateGameVMConfig>();
+
 
             var app = builder.Build();
 

@@ -6,6 +6,6 @@
         public string Cover { get; set; }
         public int CategoryId { get; set; }
         public Category Category { get; set; }
-        public ICollection<GameDevice> Devices { get; set; }
+        public ICollection<GameDevice> Devices { get; set; } 
     }
 }

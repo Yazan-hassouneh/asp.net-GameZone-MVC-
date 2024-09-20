@@ -1,5 +1,6 @@
 ﻿
 using GameZone.Settings;
+using Microsoft.EntityFrameworkCore;
 
 namespace GameZone.Services.GameServices
 {
@@ -13,6 +14,15 @@ namespace GameZone.Services.GameServices
 			_db = db;
 			_webHostEnvironment = webHostEnvironment;
 			_gameCoversPath = $"{_webHostEnvironment.WebRootPath}{FileSettings.GamesCoversPath}";
+		}
+		public IEnumerable<Game> GetAll()
+		{
+			return _db.Games
+				.Include(game => game.Category)
+				.Include(game => game.Devices)
+				.ThenInclude(device => device.device)
+				.AsNoTracking()
+				.ToList();	
 		}
 		public async Task Create(CreateGameVM newGame)
 		{

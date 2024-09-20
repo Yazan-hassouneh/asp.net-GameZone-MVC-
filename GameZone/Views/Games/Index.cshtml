@@ -1,12 +1,50 @@
-﻿
+﻿@using GameZone.Settings
+@model List<Game>
 @{
 	ViewData["Title"] = "Games List";
 }
 
 
 <div>
-	<div class="d-flex justify-content-between align-items-center">
-		<h2>Games List</h2>
+	<div class="d-flex justify-content-between align-items-center py-3 my-3">
+		<h2 class="m-0">Games List</h2>
 		<a asp-controller="Games" asp-action="Create" class="btn btn-primary fs-6"><i class="bi bi-plus-circle"></i> <strong>Add Game</strong></a>
 	</div>
 </div>
+
+
+<section>
+	<div class="row overflow-y-auto py-4 justify-content-center">
+		@{
+			@foreach (var game in Model)
+			{
+				<div class="cardContainer col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+					<div class="card">
+						<div class="imgContainer">
+							<img src="@($"{FileSettings.GamesCoversPath}{game.Cover}")" class="card-img-top h-100 object-fit-cover" alt="game Cover">
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">@game.Name</h5>
+							<div class="d-flex justify-content-between align-content-center">
+								<span class="badge bg-primary">@game.Category.Name</span>
+								<div class="d-inline-block">
+									@{
+										@foreach (var gameDevice in game.Devices)
+										{
+											<span class="badge bg-dark"><i class="@gameDevice.device.Icon"></i></span>
+										}
+									}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			}
+		}
+
+	</div>
+</section>
+
+@section Styles {
+	<link href="~/css/CoverStyle.css" rel="stylesheet" />
+}
