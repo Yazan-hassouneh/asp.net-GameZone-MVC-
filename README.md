@@ -10,12 +10,14 @@ Game Zone, asp.net project, using MVC pattern.
 
 **Entity Framework** 
 
-### - Libraries :  
+### - Libraries & Packges :  
 
 **Bootstrab**  
 **Bootswatch Litera Theme**   
 **vanilla javascript**   
 **jquery-validation**   
+**Select2**
+**fluentvalidation**
 
 ### - Addition :  
 
