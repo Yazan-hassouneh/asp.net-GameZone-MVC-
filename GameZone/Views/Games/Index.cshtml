@@ -12,40 +12,66 @@
 	</div>
 </div>
 
-<div></div>
 
 <section>
-	<div class="row overflow-y-auto py-4 justify-content-center">
-		@{
-			@foreach (var game in Model)
-			{
-				<div class="cardContainer col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-					<div class="card">
-						<div class="imgContainer">
-							<img src="@($"{FileSettings.GamesCoversPath}{game.Cover}")" class="card-img-top h-100 object-fit-cover" alt="game Cover">
-						</div>
-						<div class="card-body">
-							<h5 class="card-title">@game.Name</h5>
-							<div class="d-flex justify-content-between align-content-center">
-								<span class="badge bg-primary">@game.Category.Name</span>
-								<div class="d-inline-block">
-									@{
-										@foreach (var gameDevice in game.Devices)
-										{
-											<span class="badge bg-dark"><i class="@gameDevice.device.Icon"></i></span>
-										}
-									}
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+	<table class="table table-striped">
+		<thead>
+			<th class="text-center">#</th>
+			<th class="text-center">Image</th>
+			<th class="text-center">Name</th>
+			<th class="text-center">Category</th>
+			<th class="text-center">Devices</th>
+			<th class="text-center">Actions</th>
+		</thead> 
+		<tbody>
+			@{
+				int numberOfGames = 1;
 			}
-		}
-
-	</div>
+			@{
+				@foreach (var game in Model)
+				{
+					<tr id="row-@game.Id">
+						<td class="position-relative"><span class="position-absolute top-50 start-50 translate-middle w-100 text-center">@numberOfGames</span></td>
+						<td class="d-flex justify-content-center">
+							<div class="coverContainerTable">
+								<img src="@($"{FileSettings.GamesCoversPath}{game.Cover}")" class="h-100 w-100 object-fit-cover" alt="game Cover" />
+							</div>
+						</td>
+						<td class="position-relative"><span class="position-absolute top-50 start-50 translate-middle w-100 text-center">@game.Name</span></td>
+						<td class="position-relative"><span class="position-absolute top-50 start-50 translate-middle w-100 text-center">@game.Category.Name</span></td>
+						<td class="position-relative">
+							<div class="d-flex justify-content-center gap-1 align-items-center position-absolute top-50 start-50 translate-middle">
+								@{
+									@foreach (var gameDevice in game.Devices)
+									{
+										<span class="badge bg-dark"><i class="@gameDevice.device.Icon"></i></span>
+									}
+								}
+							</div>
+						</td>
+						<td class="position-relative">
+							<div class="d-flex justify-content-center gap-1 align-items-center position-absolute top-50 start-50 translate-middle">
+								<a asp-controller="Games" asp-action="Details" asp-route-id="@game.Id" class="fs-5 text-info"><i class="bi bi-three-dots-vertical"></i></a>
+								<a asp-controller="Games" asp-action="Update" asp-route-id="@game.Id" class="fs-5 text-primary"><i class="bi bi-pencil-square"></i></a>
+								<a href="#" data-id="@game.Id" class="fs-5 text-danger deleteBtn"><i class="bi bi-trash3"></i></a>
+							</div>
+						</td>
+					</tr>
+					{
+						numberOfGames++;
+					}
+				}
+			}
+		</tbody>
+	</table>
 </section>
 
+
 @section Styles {
-	<link href="~/css/CoverStyle.css" rel="stylesheet" />
+	 <link href="~/css/CoverStyle.css" rel="stylesheet" />
+	 <link href="~/css/SweetAlert.css" rel="stylesheet" />
 }
+@section Scripts {
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<script src="~/js/DeleteGame.js" asp-append-version="true"></script>
+}	

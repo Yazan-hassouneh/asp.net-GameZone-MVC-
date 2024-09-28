@@ -1,6 +1,5 @@
-﻿.imgContainer {
-    height : 24rem
-}
-.cardContainer {
-    max-width : 20rem;
+﻿.coverContainerTable {
+    display : inline-block;
+    width : 4rem;
+    height : 5rem;
 }

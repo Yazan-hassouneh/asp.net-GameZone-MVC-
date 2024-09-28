@@ -16,9 +16,9 @@
 		@{
 			@foreach(var game in Model)
 			{
-				<div class="cardContainer col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-					<div class="card">
-						<div class="imgContainer">
+				<a asp-controller="Games" asp-action="Details" asp-route-id="@game.Id" class="cardContainer col-12 col-sm-6 col-md-4 col-lg-3 mb-4 text-decoration-none">
+					<div class="card h-100">
+						<div class="h-100">
 							<img src="@($"{FileSettings.GamesCoversPath}{game.Cover}")" class="card-img-top h-100 object-fit-cover" alt="game Cover">
 						</div>
 						<div class="card-body">
@@ -36,7 +36,7 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</a>
 			}
 		}
 

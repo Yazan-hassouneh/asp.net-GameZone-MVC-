@@ -1,0 +1,81 @@
+﻿@using GameZone.Settings
+@using GameZone.VM
+@model UpdateGameVM
+@{
+	ViewData["Title"] = Model.Name;
+}
+
+<h2 class="text-center my-5">Add New Game To Your Store</h2>
+<hr />
+
+<section>
+	<form asp-controller="Games" enctype="multipart/form-data">
+		<div class="row">
+			<div class="col-12 col-md-6">
+@* 				<div class="">
+					<input asp-for="Id" type="text" hidden>
+				</div> *@
+				<div class="">
+					<label asp-for="Name" class="form-label mt-4">Game Title</label>
+					<input asp-for="Name" type="text" class="form-control" placeholder="Enter Game Name">
+					<small class="form-text text-muted"><span asp-validation-for="Name" class="text-danger"></span></small>
+				</div>
+
+				<div class="">
+					<label asp-for="CategoryId" class="form-label mt-4">Category</label>
+					<select class="form-select" asp-for="CategoryId" asp-items="Model.Categories" data-minimum-results-for-search="Infinity">
+						<option value=""></option>
+					</select>
+					<small class="form-text text-muted"><span asp-validation-for="CategoryId" class="text-danger"></span></small>
+				</div>
+
+				<div class="">
+					<label asp-for="SelectedDevices" class="form-label mt-4">Devices</label>
+					<select class="form-select" asp-for="SelectedDevices" asp-items="Model.Devices">
+					</select>
+					<small class="form-text text-muted"><span asp-validation-for="SelectedDevices" class="text-danger"></span></small>
+				</div>
+
+				<div class="">
+					<label asp-for="Description" class="form-label mt-4">Description</label>
+					<textarea asp-for="Description" class="form-control" rows="3"></textarea>
+					<small class="form-text text-muted"><span asp-validation-for="Description" class="text-danger"></span></small>
+				</div>
+
+				<div class="">
+					<label asp-for="Cover" class="form-label mt-4">Choose Cover</label>
+					<input asp-for="Cover"
+						   type="file" class="form-control"
+						   placeholder="Enter Game Name"
+						   data-rule-extension="@FileSettings.AllowedExtension.Replace(".", string.Empty)"
+						   data-msg-extension="Not Allwoed Extension"
+						   data-rule-maxsize="@FileSettings.CoverMaxSizeInBytes"
+						   data-msg-maxsize="Fiel Is Too Big, Choose File With Size Less Than @{@FileSettings.CoverMaxSizeInMB}MB">
+					<small class="form-text text-muted d-block"><span asp-validation-for="Cover" class="text-danger"></span></small>
+				</div>
+
+			</div>
+
+			<div class="col-12 col-md-6">
+				<img src="@($"{FileSettings.GamesCoversPath}{Model.coverPath}")" alt="Cover Preview" id="coverPreview" class="w-100 object-fit-cover" />
+			</div>
+
+		</div>
+
+		<div class="mt-5">
+			<button class="btn btn-primary" type="submit">Update</button>
+		</div>
+
+	</form>
+</section>
+
+@section Styles {
+	<link href="~/lib/select2/css/select2.min.css" rel="stylesheet" />
+}
+
+@section Scripts {
+	<partial name="_ValidationScriptsPartial"></partial>
+	<script src="~/js/creategamepage.js" asp-append-version="true"></script>
+	<script src="~/lib/select2/js/select2.min.js"></script>
+	<script src="~/lib/jquery-validation/dist/additional-methods.min.js"></script>
+}

@@ -2,6 +2,7 @@ using FluentValidation;
 using FluentValidation.AspNetCore;
 using GameZone.Configuration.VMConfig;
 using GameZone.Services.GameServices;
+using GameZone.VM;
 using Microsoft.EntityFrameworkCore;
 
 namespace GameZone
@@ -21,9 +22,11 @@ namespace GameZone
             builder.Services.AddScoped<ICategoriesServices, CategoriesServices>();
             builder.Services.AddScoped<IDevicesServices, DevicesServices>();
             builder.Services.AddScoped<IGameServices, GameServices>();
+            // 
 			builder.Services.AddFluentValidationAutoValidation();
 			builder.Services.AddFluentValidationClientsideAdapters();
 			builder.Services.AddScoped<IValidator<CreateGameVM>, CreateGameVMConfig>();
+			builder.Services.AddScoped<IValidator<UpdateGameVM>, UpdateGameVMConfig>();
 
 
             var app = builder.Build();

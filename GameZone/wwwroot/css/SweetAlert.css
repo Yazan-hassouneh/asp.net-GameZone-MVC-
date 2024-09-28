@@ -1,0 +1,5 @@
+﻿.swal2-cancel,
+.swal2-confirm,
+.swal2-deny {
+    margin: 0px 8px !important;
+}
